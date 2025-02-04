@@ -1,0 +1,5 @@
+    1  mkdir ws2
+    2  cd ws2/
+    3  script ws2.txt
+    4  vi ws2.txt
+    5  history > cmds.log
