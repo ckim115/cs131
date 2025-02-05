@@ -1,14 +1,25 @@
-Script started on 2025-02-04 00:24:15+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="111" LINES="40"]
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ pwd
+(Question 2)
+christina_hayoung@instance-20250123-035832$ pwd
 /home/christina_hayoung/cs131/ws2
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ pwd[Kpwd[Kid -u
+
+(Question 3)
+christina_hayoung@instance-20250123-035832$ id -u
 1001
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ id -g
+christina_hayoung@instance-20250123-035832$ id -g
 1002
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ ls -l /proc/meminfo
+
+(Question 4, memory information file)
+christina_hayoung@instance-20250123-035832$ ls -l /proc/meminfo
 -r--r--r-- 1 root root 0 Feb  3 23:53 /proc/meminfo
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ ls -l /proc/meminfo[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Khead /proc/meminfo
-MemTotal:         976904 kB
+
+(Question 4, CPU information)
+christina_hayoung@instance-20250123-035832$ ls -l /proc/cpuinfo
+-r--r--r-- 1 root root 0 Feb  3 23:53 /proc/cpuinfo
+
+(Question 5, memory information file)
+(total memory is 976904 kB)
+christina_hayoung@instance-20250123-035832$ ls -l head /proc/meminfo
+MemTotal:         976904 kB 
 MemFree:          511784 kB
 MemAvailable:     651476 kB
 Buffers:           16028 kB
@@ -18,10 +29,13 @@ Active:           132980 kB
 Inactive:         186840 kB
 Active(anon):        892 kB
 Inactive(anon):    68264 kB
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ head /proc/cpuinfomeminfo[1@ls -l[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[Kcpuinfo
--r--r--r-- 1 root root 0 Feb  3 23:53 /proc/cpuinfo
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ ls -l /proc/cpuinfo[1Phead[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-processor	: 0
+
+(Question 6, head)
+(number of processors is 0)
+(Processor architecture name Intel(R) Xeon(R) CPU) 
+(processor speed 2.20 GHz)
+christina_hayoung@instance-20250123-035832$ head /proc/cpuinfo
+processor	: 0 
 vendor_id	: GenuineIntel
 cpu family	: 6
 model		: 79
@@ -31,7 +45,9 @@ microcode	: 0xffffffff
 cpu MHz		: 2200.214
 cache size	: 56320 KB
 physical id	: 0
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ head /proc/cpuinfo[1P /proc/cpuinfo[1P /proc/cpuinfo[1P /proc/cpuinfo[1P /proc/cpuinfot /proc/cpuinfoa /proc/cpuinfoi /proc/cpuinfol /proc/cpuinfo
+
+(Question 6, tail)
+christina_hayoung@instance-20250123-035832$ tail /proc/cpuinfo
 cpuid level	: 13
 wp		: yes
 flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx smap xsaveopt arat md_clear arch_capabilities
@@ -42,7 +58,8 @@ cache_alignment	: 64
 address sizes	: 46 bits physical, 48 bits virtual
 power management:
 
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ tail /proc/cpuinfo[1P /proc/cpuinfo[1P /proc/cpuinfo[1P /proc/cpuinfo[1P /proc/cpuinfoc /proc/cpuinfoa /proc/cpuinfot /proc/cpuinfo
+(Question 6, cat)
+christina_hayoung@instance-20250123-035832$ cat /proc/cpuinfo
 processor	: 0
 vendor_id	: GenuineIntel
 cpu family	: 6
@@ -97,9 +114,11 @@ cache_alignment	: 64
 address sizes	: 46 bits physical, 48 bits virtual
 power management:
 
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ ls -l /etc/os-release
+(Question 7)
+christina_hayoung@instance-20250123-035832$ ls -l /etc/os-release
 lrwxrwxrwx 1 root root 21 Jan  2  2024 [0m[01;36m/etc/os-release[0m -> ../usr/lib/os-release
-]0;christina_hayoung@instance-20250123-035832: ~/cs131/ws2[01;32mchristina_hayoung@instance-20250123-035832[00m:[01;34m~/cs131/ws2[00m$ cat ls -l /etc/os-release[1P[1P[1P[1P /etc/os-release[C[1P /etc/os-releasec /etc/os-releasea /etc/os-releaset /etc/os-release
+
+christina_hayoung@instance-20250123-035832$ cat ls -l /etc/os-release
 NAME="Ubuntu"
 VERSION="20.04.6 LTS (Focal Fossa)"
 ID=ubuntu
