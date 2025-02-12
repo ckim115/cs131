@@ -1,7 +1,10 @@
+(top 3 pickup locations for January 2)
 christina_hayoung@instance-20250123-035832:~/cs131/ws3$ grep "2019-01-02" ~/2019-01-h1.csv | cut -d ',' -f8 | sort | uniq -c | sort -nr | head -n 3
    8605 161.0
    8407 132.0
    8163 186.0
+
+(top 3 pickup locations for January 10)
 christina_hayoung@instance-20250123-035832:~/cs131/ws3$ grep "2019-01-10" ~/2019-01-h1.csv | cut -d ',' -f8 | sort | uniq -c | sort -nr | head -n 3
   13738 237.0
   13519 236.0
