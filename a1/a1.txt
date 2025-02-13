@@ -1,0 +1,12 @@
+(demonstration of l and w)
+christina_hayoung@instance-20250123-035832: ~/cs131/a1$ l
+total 8
+drwxrwxr-x 2 christina_hayoung christina_hayoung 4096 Feb 13 21:22 FARE
+-rw-rw-r-- 1 christina_hayoung christina_hayoung  484 Feb 13 21:48 cmds.log
+-rw-rw-r-- 1 christina_hayoung christina_hayoung    0 Feb 13 21:49 a1.txt
+christina_hayoung@instance-20250123-035832: ~/cs131/a1$ w
+      4      29     230
+christina_hayoung@instance-20250123-035832: ~/cs131/a1$ exit
+exit
+
+Script done on 2025-02-13 21:49:50+00:00 [COMMAND_EXIT_CODE="0"]
