@@ -22,7 +22,7 @@
   544  sed -r 's/^\s+//g' 151_num_fares.txt > fixed_151_num_fares.txt
   549  tr ' ' '*' < fixed_151_num_fares.txt > mult_151.0-239.0.txt 
   553  tr '\n' '+' < mult_151.0-239.0.txt > calc_151.0-239.0.txt 
-  558  vim calc_151.0-239.0.txt (to add 0 at the end) 
+  558  tr '\n' '0' < calc_151.0-239.0.txt 
   563  cat calc_151.0-239.0.txt | bc > sum_151.0-239.0.txt  
   
   (for second file)
@@ -30,5 +30,5 @@
   599  sed -r 's/^\s+//g' 239_num_fares.txt > fixed_239_num_fares.txt
   600  tr ' ' '*' < fixed_239_num_fares.txt > mult_239.0-246.0.txt
   601  tr '\n' '+' < mult_239.0-246.0.txt > calc_239.0-246.0.txt
-  602  vim calc_239.0-246.0.txt (to add 0 at the end) 
+  602  tr '\n' '0' < calc_239.0-246.0.txt 
   603  cat calc_239.0-246.0.txt | bc > sum_239.0-246.0.txt
