@@ -9,4 +9,8 @@ christina_hayoung@instance-20250123-035832: ~/cs131/a1$ w
 christina_hayoung@instance-20250123-035832: ~/cs131/a1$ exit
 exit
 
-Script done on 2025-02-13 21:49:50+00:00 [COMMAND_EXIT_CODE="0"]
+(mean of fare amount for each file)
+For 151.0-239.0.txt
+29681.5
+
+For 239.0-246.0.txt

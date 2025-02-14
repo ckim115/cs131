@@ -11,3 +11,15 @@
   423  grep "151.0,239.0," pu_do_fare.txt | cut -d "," -f3 > FARE/151.0-239.0.txt
   429  grep "239.0,246.0," pu_do_fare.txt | cut -d "," -f3 > FARE/239.0-246.0.txt
   431  cd FARE/
+  440  tr '\n' '+' < 151.0-239.0.txt > calc_151.0-239.0.txt
+  476  cd cs131/
+  477  cd a1/
+  478  cd FARE/
+  481  script -a ../a1.txt
+  494  sort 151.0-239.0.txt | uniq -c > 151_num_fares.txt
+  544  sed -r 's/^\s+//g' 151_num_fares.txt > fixed_151_num_fares.txt
+  549  tr ' ' '*' < fixed_151_num_fares.txt > mult_151.0-239.0.txt 
+  553  tr '\n' '+' < mult_151.0-239.0.txt > calc_151.0-239.0.txt 
+  558  vim calc_151.0-239.0.txt (to add 0 at the end) 
+  562  bc calc_151.0-239.0.txt >> ../a1.txt
+  563  cat calc_151.0-239.0.txt | bc > sum_151.0-239.0.txt  
