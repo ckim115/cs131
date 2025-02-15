@@ -48,3 +48,10 @@
   608  cat calc_239_tot_fares.txt | bc > sum_239_tot.txt
   610  cat sum_239_tot.txt >> calc_mean_239.txt
   612  cat calc_mean_239.txt | bc -l >> ../a1.txt
+
+
+(Finding highest amount paid on January 10, 2019)
+  650  grep "2019-01-10" ~/2019-01-h1.csv | grep -v "2019-01-09" | cut -d "," -f17 | sort | uniq | sort -nr | head -n1 >> a1.txt
+
+(Finding top 10 drop off locations for 3 passangers)
+  644  grep "^[^,]*,[^,]*,[^,]*,3.0,.*$" ~/2019-01-h1.csv | cut -d "," -f9 | sort | uniq -c | sort -nr | head -n10 >> a1.txt 
