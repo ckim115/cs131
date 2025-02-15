@@ -13,6 +13,7 @@
   431  cd FARE/
 
   (calculating sum of fares in first file)
+    * Finding sum of all fares
   440  tr '\n' '+' < 151.0-239.0.txt > calc_151.0-239.0.txt
   476  cd cs131/
   477  cd a1/
@@ -24,11 +25,26 @@
   553  tr '\n' '+' < mult_151.0-239.0.txt > calc_151.0-239.0.txt 
   558  tr '\n' '0' < calc_151.0-239.0.txt 
   563  cat calc_151.0-239.0.txt | bc > sum_151.0-239.0.txt  
-  
+    * Finding mean
+  576  cut -d " " -f1 fixed_151_num_fares.txt | tr '\n' '+' > calc_151_tot_fares.txt
+  580  echo "0" >> calc_151_tot_fares.txt
+  582  cat calc_151_tot_fares.txt | bc > sum_151_tot.txt
+  589  tr '\n' '/' < sum_151.0-239.0.txt > calc_mean_151.txt
+  591  cat sum_151_tot.txt >> calc_mean_151.txt
+  595  cat calc_mean_151.txt | bc -l >> ../a1.txt
+
   (for second file)
+    * Finding sum of all fares
   594  sort 239.0-246.0.txt | uniq -c > 239_num_fares.txt
   599  sed -r 's/^\s+//g' 239_num_fares.txt > fixed_239_num_fares.txt
   600  tr ' ' '*' < fixed_239_num_fares.txt > mult_239.0-246.0.txt
   601  tr '\n' '+' < mult_239.0-246.0.txt > calc_239.0-246.0.txt
   602  tr '\n' '0' < calc_239.0-246.0.txt 
   603  cat calc_239.0-246.0.txt | bc > sum_239.0-246.0.txt
+    * Finding mean
+  600  cut -d " " -f1 fixed_239_num_fares.txt | tr '\n' '+' > calc_239_tot_fares.txt
+  603  echo "0" >> calc_239_tot_fares.txt
+  605  tr '\n' '/' < sum_239.0-246.0.txt > calc_mean_239.txt
+  608  cat calc_239_tot_fares.txt | bc > sum_239_tot.txt
+  610  cat sum_239_tot.txt >> calc_mean_239.txt
+  612  cat calc_mean_239.txt | bc -l >> ../a1.txt

@@ -9,8 +9,12 @@ christina_hayoung@instance-20250123-035832: ~/cs131/a1$ w
 christina_hayoung@instance-20250123-035832: ~/cs131/a1$ exit
 exit
 
-(mean of fare amount for each file)
+2c) Mean of fare amount for each file
 For 151.0-239.0.txt
-29681.5
+6.64461607342735616745
 
 For 239.0-246.0.txt
+12.43428258488499452354
+
+2d) Highest total amount paid by customers who were picked up on January 10, 2019
+
