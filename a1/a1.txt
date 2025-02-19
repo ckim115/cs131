@@ -1,3 +1,4 @@
+TASK 1
 (demonstration of l and w)
 christina_hayoung@instance-20250123-035832: ~/cs131/a1$ l
 total 8
@@ -9,6 +10,7 @@ christina_hayoung@instance-20250123-035832: ~/cs131/a1$ w
 christina_hayoung@instance-20250123-035832: ~/cs131/a1$ exit
 exit
 
+TASK 2
 2c) Mean of fare amount for each file
 For 151.0-239.0.txt
 6.64461607342735616745
