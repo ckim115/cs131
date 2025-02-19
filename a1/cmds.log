@@ -2,9 +2,14 @@
 (TASK ONE)
   379  l
   380  w
+
+(TASK 2)
+  (2a: Create a directory FARE under a1 directory with mkdir)
   381  cd cs131/
   383  cd a1/
   384  mkdir FARE
+
+  (2b: For each pair of locations, redirect the fare amount to file)
   403  grep "2019" ~/2019-01-h1.csv | cut -d "," -f 8,9,11 | > pu_do_fare.txt
   406  grep "2019" ~/2019-01-h1.csv > taxi_data.txt
   417  cut -d "," -f 8,9,11 taxi_data.txt > pu_do_fare.txt
@@ -13,7 +18,7 @@
   429  grep "239.0,246.0," pu_do_fare.txt | cut -d "," -f3 > FARE/239.0-246.0.txt
   431  cd FARE/
 
-(TASK 2)
+  (2c: compute averages of fare prices in the two files)
   (calculating sum of fares in first file)
     * Finding sum of all fares
   440  tr '\n' '+' < 151.0-239.0.txt > calc_fare_sum.txt
@@ -44,8 +49,8 @@
   612  cat mean_calc.txt | bc -l >> ../a1.txt
 
 
-(Finding highest amount paid on January 10, 2019)
+(2d: Finding highest amount paid on January 10, 2019)
   650  grep "2019-01-10" ~/2019-01-h1.csv | grep -v "2019-01-09" | cut -d "," -f17 | sort | uniq | sort -nr | head -n1 >> a1.txt
 
-(Finding top 10 drop off locations for 3 passangers)
+(2e: Finding top 10 drop off locations for 3 passangers)
   644  grep "^[^,]*,[^,]*,[^,]*,3.0,.*$" ~/2019-01-h1.csv | cut -d "," -f9 | sort | uniq -c | sort -nr | head -n10 >> a1.txt 
