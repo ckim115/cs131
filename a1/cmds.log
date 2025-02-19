@@ -53,4 +53,4 @@
   650  grep "2019-01-10" ~/2019-01-h1.csv | grep -v "2019-01-09" | cut -d "," -f17 | sort | uniq | sort -nr | head -n1 >> a1.txt
 
 (2e: Finding top 10 drop off locations for 3 passangers)
-  644  grep "^[^,]*,[^,]*,[^,]*,3.0,.*$" ~/2019-01-h1.csv | cut -d "," -f9 | sort | uniq -c | sort -nr | head -n10 >> a1.txt 
+  644  grep -E "^[^,]*,[^,]*,[^,]*,[3-9]" ~/2019-01-h1.csv | cut -d "," -f9 | sort | uniq -c | sort -nr | head >> a1.txt 
