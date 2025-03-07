@@ -3,7 +3,6 @@ This tool removes all files and directories made before or at a specified date.
 Format: ./delete\_by [file/directory] [date] [arguments]
 
 Arguments:
--d	only delete directories
 -f	only delete regular files
 -s	only delete files modified on the date specified
 -w	do not print out warnings
