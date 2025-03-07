@@ -24,3 +24,20 @@ $ ls -l
 total 8
 -rw-rw-r-- 1 christina\_hayoung christina\_hayoung 618 Mar  7 02:11 README.md
 -rwxr-xr-x 1 christina\_hayoung christina\_hayoung 801 Mar  7 02:06 remove\_by.sh
+
+With -f
+$ ls
+README.md  remove\_by.sh  test
+$ ./remove\_by.sh test 2025-03-07 -f
+$ ls
+README.md  remove\_by.sh  test
+$ ls test
+
+
+With -w
+$ ./remove\_by.sh test 2024-03-07
+File test/sample.txt was modified after 2024-03-07
+File test was modified after 2024-03-07
+
+$ ./remove\_by.sh test 2024-03-07 -w
+

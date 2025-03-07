@@ -8,9 +8,9 @@
 # Remove all files modified before or during a given date
 FILE=$1
 DATE=$2
-ARG=$3 
+ARGS=$3 
 # If given 'w' will not produce warnings
-# If given 's' will only remove files of specific date
+# If given 's' will only remove files of specified date
 # If given 'f' will only remove files
 
 date_sec=$(date -d "$DATE" +%s) # Date removed by, converted into seconds. Required.
@@ -26,26 +26,26 @@ elif [ -d "$FILE" ]; then
 	if [[ -n $(ls "$FILE") ]]; then
 		# Go through each file recursively
 		for i in "$FILE"/*; do
-			"$0" "$i" "$DATE"
+			"$0" "$i" "$DATE" "$ARGS"
 		done
 	fi
 	# If argument 'f', do not remove directory
-	if [[ "$ARG" == *"f"* ]]; then
+	if [[ "$ARGS" == *"f"* ]]; then
         	exit 0
 	fi
 else
-	if [[ "$ARG" == *"w"* ]]; then
+	if [[ "$ARGS" != *"w"* ]]; then
 		echo "File $FILE is not of valid type"
 	fi
 	exit 0
 fi
 
 # Remove files
-if [[ "$ARG" == *"s"* && "$date_sec" -eq "$file_date_sec" \
+if [[ "$ARGS" == *"s"* && ("$date_sec" -eq "$file_date_sec") \
        || "$date_sec" -ge "$file_date_sec" ]]; then
 	rm -r "$FILE"
 else
-        if [[ "$ARG" == *"w"* ]]; then
+        if [[ "$ARGS" != *"w"* ]]; then
 		echo "File $FILE was modified after $DATE"
         fi
 fi
