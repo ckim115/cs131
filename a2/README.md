@@ -1,11 +1,16 @@
 This tool removes all files and directories made before or at a specified date.
 
 Format: ./delete\_by [file/directory] [date] [arguments]
+By default, delete\_by uses the last modified date to remove files
+Date should be in the format YYYY-MM-DD
+Arguments should be together: -[ARG1][ARG2][ARG3] or [ARG1][ARG2][ARG3]
 
 Arguments:
 -f	only delete regular files
 -s	only delete files modified on the date specified
 -w	do not print out warnings
+-c	use the date created of the file to delete
+-a	use the date last accessed of the file to delete
 
 Example:
 $ ls -l

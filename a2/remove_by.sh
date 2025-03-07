@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# TODO: add specification on whether to delete based on
-#	1) creation date (-c)
-#	2) last modified (-m, default)
-#	3) last accessed (-a)
-
 # Remove all files modified before or during a given date
 FILE=$1
 DATE=$2
@@ -13,8 +8,20 @@ ARGS=$3
 # If given 's' will only remove files of specified date
 # If given 'f' will only remove files
 
+date_acc="%y"
+case $ARGS in
+	*"c"*) 
+		date_acc="%w"
+		;;
+	*"a"*)
+		date_acc="%x"
+		;;
+	*)
+		;;
+esac
+
 date_sec=$(date -d "$DATE" +%s) # Date removed by, converted into seconds. Required.
-file_date=$(stat -c %y "$FILE" | cut -d ' ' -f1) # Actual file date
+file_date=$(stat -c "$date_acc" "$FILE" | cut -d ' ' -f1) # Actual file date
 file_date_sec=$(date -d "$file_date" +%s) # In seconds
 
 # Check to make sure it is a file or directory
@@ -47,11 +54,7 @@ if [[ "$ARGS" == *"s"* && ("$date_sec" -eq "$file_date_sec") \
 	rm -r "$FILE"
 else
         if [[ "$ARGS" != *"w"* ]]; then
-		if [[ "$ARGS" == *"s"* ]]; then
-			echo "File $FILE was not modified on $DATE"
-		else
-			echo "File $FILE was modified after $DATE"
-		fi
+		echo "File $FILE was not removed"
         fi
 fi
 
