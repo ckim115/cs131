@@ -43,10 +43,15 @@ fi
 # Remove files
 if [[ "$ARGS" == *"s"* && ("$date_sec" -eq "$file_date_sec") \
        || "$date_sec" -ge "$file_date_sec" ]]; then
+	echo "Removed $FILE"
 	rm -r "$FILE"
 else
         if [[ "$ARGS" != *"w"* ]]; then
-		echo "File $FILE was modified after $DATE"
+		if [[ "$ARGS" == *"s"* ]]; then
+			echo "File $FILE was not modified on $DATE"
+		else
+			echo "File $FILE was modified after $DATE"
+		fi
         fi
 fi
 
