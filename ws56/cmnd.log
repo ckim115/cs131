@@ -1,24 +1,12 @@
+For Task 1 (sed)
+1)
     1  head -n2 ~/2019-01-h1.csv 
-    2  sed -n '2.0/ p' ~/2019-01-h1.csv | head
-    3  sed -n '2/ p' ~/2019-01-h1.csv | head
-    4  sed -n '/2.0/ p' ~/2019-01-h1.csv | head
-    5  sed -n '/^2.0/ p' ~/2019-01-h1.csv | head
     6  sed -n '/^2.0/ p' ~/2019-01-h1.csv > vendor2.csv
-    7  sed '/:/! d'; '/"/! d'; '/-/! d' ~/2019-01-h1.csv | head
-    8  sed '/:/! d; /"/! d; /-/! d' ~/2019-01-h1.csv | head
-    9  sed 's/://' ~/2019-01-h1.csv | head
-   10* sed 's/://' ~/2019-01-h1.csv | head
-   11  sed '/:/! d' ~/2019-01-h1.csv | head
-   12  sed '/.*:.*/! d' ~/2019-01-h1.csv | head
-   13  sed -n '/.*:.*/! d' ~/2019-01-h1.csv | head
-   14  sed '/.*:.*/! d' ~/2019-01-h1.csv | head
-   15  sed 's/://g' ~/2019-01-h1.csv | head
-   16  ls
-   17  mv vendor2.csv ws56/
-   18  ls
-   19  cd ws56/
-   20  history > cmnd.log
-   21  sed 's/://g; s/"//g s/-//g' ~/2019-01-h1.csv | head
-   22  sed 's/://g; s/"//g; s/-//g' ~/2019-01-h1.csv | head
+2)
    23  sed 's/://g; s/"//g; s/-//g' ~/2019-01-h1.csv > no-separators.csv
-   24  history > cmnd.log
+ 1042  head -10 no-separators.csv > ws56.txt
+3)
+ 1048  sed 's/\.[^,]*//g' no-separators.csv > no-fractions.csv
+ 1049  vim ws56.txt 
+ 1050  head -10 no-fractions.csv >> ws56.txt 
+ 1051  vim ws56.txt 
