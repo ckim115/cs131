@@ -49,8 +49,10 @@ fi
 
 # Remove files
 if [[ "$ARGS" == *"s"* && ("$date_sec" -eq "$file_date_sec") \
-       || "$date_sec" -ge "$file_date_sec" ]]; then
-	echo "Removed $FILE"
+	|| "$ARGS" != *"s"* && ("$date_sec" -ge "$file_date_sec") ]]; then
+	if [[ "$ARGS" != *"w"* ]]; then
+		echo "Removed $FILE"
+	fi
 	rm -r "$FILE"
 else
         if [[ "$ARGS" != *"w"* ]]; then
