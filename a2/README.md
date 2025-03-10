@@ -1,7 +1,7 @@
 This tool removes all files and directories made before or at a specified date.  
 This command is useful for deleting a large amount of files that are outdated/no longer in use.
   
-Format: ./delete\_by [file/directory] [date] [arguments]  
+Format: ./remove\_by [file/directory] [date] [arguments]  
 By default, delete\_by uses the last modified date to remove files  
 Date should be in the format YYYY-MM-DD  
 Arguments should be together: -[ARG1][ARG2][ARG3] or [ARG1][ARG2][ARG3]  
