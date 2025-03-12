@@ -1,9 +1,15 @@
 #!/bin/bash
 
 # Remove all files modified before or during a given date
-FILE=$1
-DATE=$2
-ARGS=$3 
+if [ "$#" -eq 0]; then
+	echo "must include file path and date!"
+fi
+FILE=$(eval "echo \$$(($#-1))")
+DATE=$(eval "echo \$$(($#))")
+ARGS=''
+if [ "$#" -gt 2 ]; then
+	ARGS=$1 
+fi
 # If given 'w' will not produce warnings
 # If given 's' will only remove files of specified date
 # If given 'f' will only remove files
@@ -33,7 +39,7 @@ elif [ -d "$FILE" ]; then
 	if [[ -n $(ls "$FILE") ]]; then
 		# Go through each file recursively
 		for i in "$FILE"/*; do
-			"$0" "$i" "$DATE" "$ARGS"
+			"$0" "$ARGS" "$i" "$DATE"
 		done
 	fi
 	# If argument 'f', do not remove directory

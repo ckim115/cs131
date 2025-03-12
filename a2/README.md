@@ -8,7 +8,7 @@ This command is useful for deleting a large amount of files that are outdated/no
 ```bash
 ./removeby [arguments] [file/directory] [date]
 ```
-By default, delete_by uses the last modified date to remove files  
+By default, removeby uses the last modified date to remove files  
 Date should be in the format **YYYY-MM-DD**  
 Arguments should be together: **-[ARG1][ARG2][ARG3]** or **[ARG1][ARG2][ARG3]**
 
@@ -45,7 +45,7 @@ total 8
 Input:
 ```bash
 $ ls
-$ ./removeby.sh test 2025-03-07 -f
+$ ./removeby.sh -f test 2025-03-07
 $ ls
 $ ls test
 ```
@@ -63,7 +63,7 @@ README.md removeby.sh test
 Input:
 ```bash
 $ ./removeby.sh test 2024-03-07
-$ ./remove_by.sh test 2024-03-07 -w
+$ ./remove_by.sh -w test 2024-03-07
 ```
 
 Output:
