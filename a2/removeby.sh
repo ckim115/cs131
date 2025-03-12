@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Remove all files modified before or during a given date
-if [ "$#" -eq 0]; then
+if [ "$#" -eq 0 ]; then
 	echo "must include file path and date!"
+	exit 0
 fi
+
 FILE=$(eval "echo \$$(($#-1))")
 DATE=$(eval "echo \$$(($#))")
 ARGS=''
