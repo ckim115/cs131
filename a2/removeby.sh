@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Remove all files modified before or during a given date
-if [ "$#" -eq 0 ]; then
+if [ "$#" -lt 2 ]; then
 	echo "must include file path and date!"
 	exit 0
 fi
@@ -44,8 +44,8 @@ elif [ -d "$FILE" ]; then
 			"$0" "$ARGS" "$i" "$DATE"
 		done
 	fi
-	# If argument 'f', do not remove directory
-	if [[ "$ARGS" == *"f"* ]]; then
+	# If argument 'f' or there still remains files in the directory, do not remove directory
+	if [[ "$ARGS" == *"f"* || -n $(ls "$FILE") ]]; then
         	exit 0
 	fi
 else
