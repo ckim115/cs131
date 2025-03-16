@@ -6,7 +6,7 @@ This command is useful for deleting a large amount of files that are outdated/no
 
 ## Usage
 ```bash
-./removeby [arguments] [file/directory] [date]
+./removeby.sh [arguments] [file/directory] [date]
 ```
 By default, removeby uses the last modified date to remove files  
 Date should be in the format **YYYY-MM-DD**  
