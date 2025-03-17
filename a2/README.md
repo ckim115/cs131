@@ -1,4 +1,4 @@
-# removeby
+# removeby - File Deletion Tool
 
 This tool removes all files and directories made before or at a specified date.
 
