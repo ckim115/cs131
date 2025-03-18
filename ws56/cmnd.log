@@ -10,3 +10,14 @@ For Task 1 (sed)
  1049  vim ws56.txt 
  1050  head -10 no-fractions.csv >> ws56.txt 
  1051  vim ws56.txt 
+
+For Task 2 (awk)
+1)
+   26  awk 'BEGIN{FS=","} { if ($17 >= 10.0) print $13 } ' ~/2019-01-h1.csv | sed 1d | sort | uniq -c | sort -nr | awk '{ print $2, $1 }' >> results.txt
+   29  cat results.txt >> ws56.txt 
+
+2)
+    1  awk 'BEGIN{FS=","} { print $13 }' ~/2019-01-h1.csv | s
+    2  awk 'BEGIN{FS=","} { print $13 }' ~/2019-01-h1.csv | sed 1d | sort | uniq -c | sort -nr | awk '{ print $2 }' > results.txt
+    3  head -20 results.txt >> ws56.txt 
+    4  history >> cmnd.log 

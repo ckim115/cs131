@@ -24,3 +24,19 @@ vendorid,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distanc
 2,20181128 162937,20181128 163343,5,0,2,N,193,193,2,52,0,0,0,0,0,55,
 1,20190101 002128,20190101 002837,1,1,1,N,163,229,1,6,0,0,1,0,0,9,
 1,20190101 003201,20190101 004539,1,3,1,N,229,7,1,13,0,0,3,0,0,18,
+
+For Task 2, identify the frequency of the tip amounts from the customers who paid more than and equal to US$ 10 total amt:
+0.5 2106717
+0.0 14815
+0.25 15
+32.53 1
+18.3 1
+
+Find the 20 most common tips on the results.txt file. This result should be saved to "ws56.txt" by listing the 20 lines in descending order.
+0.5
+0.0
+-0.5
+0.25
+32.53
+18.3
+0.9
