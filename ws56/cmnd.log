@@ -13,7 +13,7 @@ For Task 1 (sed)
 
 For Task 2 (awk)
 1)
-   26  awk 'BEGIN{FS=","} {if ($17 >= 10.0) tips[$13]++ } END{ for (t in tips) print t, tips[t] }' ~/2019-01-h1.csv | sed 3d >> ws56.txt
+   26  awk 'BEGIN{FS=","} {if ($17 >= 10.0) tips[$14]++ } END{ for (t in tips) print t, tips[t] }' ~/2019-01-h1.csv | sed 3d >> ws56.txt
 
 2)
-    1  awk 'BEGIN{FS=","} { tips[$13]++ } END{ for (t in tips) print tips[t], t }' ~/2019-01-h1.csv | sed 4d | sort -nr | awk '{ print $2 }' >> ws56.txt
+    1  awk 'BEGIN{FS=","} { tips[$14]++ } END{ for (t in tips) print tips[t], t }' ~/2019-01-h1.csv | sed 4d | sort -nr | awk '{ print $2 }' | head -20 >> ws56.txt
