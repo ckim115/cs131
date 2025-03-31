@@ -1,0 +1,27 @@
+Alice
+253
+84.33
+Pass
+
+Bob
+246
+82.00
+Pass
+
+Charlie
+270
+90.00
+Pass
+
+David
+195
+65.00
+Fail
+
+Eve
+265
+88.33
+Pass
+
+Highest scoring student: Charlie, ID 103
+Lowest scoring student: David, ID 104

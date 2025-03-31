@@ -1,0 +1,4 @@
+    1  vim grader.awk 
+    2  awk -f grader.awk data.txt > a3.txt 
+    3  cat a3.txt 
+    4  history > cmnd.log 
