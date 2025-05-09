@@ -1,0 +1,17 @@
+Cluster 0:
+HP: 50.025	Atk: 53.468	Def: 52.086	SpAtk: 48.068	SpDef: 49.439	Speed: 49.046
+
+Cluster 1:
+HP: 94.283	Atk: 100.533	Def: 78.058	SpAtk: 68.992	SpDef: 72.425	Speed: 58.742
+
+Cluster 2:
+HP: 81.491	Atk: 73.274	Def: 82.736	SpAtk: 110.792	SpDef: 103.302	Speed: 83.321
+
+Cluster 3:
+HP: 90.513	Atk: 135.088	Def: 94.412	SpAtk: 119.800	SpDef: 94.325	Speed: 98.700
+
+Cluster 4:
+HP: 65.371	Atk: 85.543	Def: 134.400	SpAtk: 64.614	SpDef: 93.243	Speed: 48.886
+
+Cluster 5:
+HP: 66.882	Atk: 80.583	Def: 65.222	SpAtk: 74.076	SpDef: 69.201	Speed: 95.069

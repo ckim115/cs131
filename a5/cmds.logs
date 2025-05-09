@@ -1,0 +1,18 @@
+ 1173  vim mean_clust
+ 1180  vim ave_by_clust.txt
+ 1193  vim sepClust.sh
+ 1195  chmod 755 mean_clust
+ 1196  chmod 755 sepClust.sh 
+ 1202  ./sepClust.sh 0 | awk -f mean_clust >> ave_by_clust.txt
+ 1203  vim ave_by_clust.txt
+ 1204  ./sepClust.sh 1 | awk -f mean_clust >> ave_by_clust.txt 
+ 1205  vim ave_by_clust.txt 
+ 1206  ./sepClust.sh 2 | awk -f mean_clust >> ave_by_clust.txt
+ 1207  vim ave_by_clust.txt 
+ 1208  ./sepClust.sh 3 | awk -f mean_clust >> ave_by_clust.txt 
+ 1209  vim ave_by_clust.txt 
+ 1210  ./sepClust.sh 4 | awk -f mean_clust >> ave_by_clust.txt 
+ 1211  vim ave_by_clust.txt 
+ 1212  ./sepClust.sh 5 | awk -f mean_clust >> ave_by_clust.txt 
+ 1213  cat ave_by_clust.txt 
+ 1214  history >> cmds.logs

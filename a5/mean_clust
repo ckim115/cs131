@@ -1,0 +1,18 @@
+BEGIN{FS=","} {
+	num++
+	hp += $2
+	atk += $3
+	def += $4
+	spatk += $5
+	spdef += $6
+	spd += $7
+}
+END {
+	hp /= num
+	atk /= num
+	def /= num
+	spatk /= num
+	spdef /= num
+	spd /= num
+	printf ("HP: %.3f\tAtk: %.3f\tDef: %.3f\tSpAtk: %.3f\tSpDef: %.3f\tSpeed: %.3f\n",hp,atk,def,spatk,spdef,spd)
+}
